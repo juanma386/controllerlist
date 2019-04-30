@@ -1,14 +1,38 @@
 # controllerlist
 Controlador para listar controladores dentro de codeigniter
 
-Controllerlist
-A simple library to list all your controllers and methods of your Codeigniter 2 application.
+# CodeIgniter3 Filename Checker
 
-Usage
-Copy the file "Controllerlist.php" to your application/libraries folder. In one of your controllers do the following:
+This controller checks CodeIgniter 3.0 class filename.
 
-$this->load->library('controllerlist');
-print_r($this->controllerlist->getControllers());
-This will show you an array with all the controllers and their methods.
+> Starting with CodeIgniter 3.0, all class filenames (libraries, drivers, controllers and models) must be named in a Ucfirst-like manner or in other words - they must start with a capital letter.
+[CodeIgniter User Guide](http://www.codeigniter.com/user_guide/installation/upgrade_300.html#step-2-update-your-classes-file-names)
 
-Contact me at Peter Prins
+## Installation
+
+Install `controllers/Check.php` into your CodeIgniter 3.0 `application/controllers` folder.
+
+## Usage
+
+Access to `http://your-server/check/filename`.
+
+Or you can run via CLI:
+	
+~~~
+$ php index.php check filename
+~~~
+
+If you want to fix filename:
+
+~~~
+$ php index.php check filename fix
+~~~
+
+## Related Projects for CodeIgniter 3.0
+
+* [CodeIgniter Composer Installer](https://github.com/kenjis/codeigniter-composer-installer)
+* [Cli for CodeIgniter 3.0](https://github.com/kenjis/codeigniter-cli)
+* [CI PHPUnit Test](https://github.com/kenjis/ci-phpunit-test)
+* [CodeIgniter Simple and Secure Twig](https://github.com/kenjis/codeigniter-ss-twig)
+* [CodeIgniter Doctrine](https://github.com/kenjis/codeigniter-doctrine)
+* [CodeIgniter Deployer](https://github.com/kenjis/codeigniter-deployer)
